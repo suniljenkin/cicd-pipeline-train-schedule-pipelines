@@ -1,8 +1,8 @@
 pipeline {
   agent any
   stages {
-    stage ('Build') {
-      when {
+    stage('DeployToProduction') {
+            when {
                 branch 'master'
             }
             steps {
@@ -31,6 +31,6 @@ pipeline {
                         ]
                     )
                 }
-    }
+            }
   }
 }
